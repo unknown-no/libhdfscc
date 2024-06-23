@@ -1,3 +1,5 @@
 .cache
+.install
 
+contrib-cmake/libhdfs3/crc_iscsi_v_pcl.o
 build
