@@ -17,7 +17,7 @@ function Build()
     cd ${CURRENT_DIR}
 
     # cmake -S . -B build -DSANITIZE=address
-    cmake -S . -B build
+    cmake -S . -B build -DUSE_KRB5=1 -DKRB5_LIBRARY=krb5
     cmake --build build
 }
 

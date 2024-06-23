@@ -5,6 +5,7 @@ EXECUTE_PROCESS(
     WORKING_DIRECTORY ${SRC_DIR}
     COMMAND_ECHO STDOUT
     COMMAND ${SRC_DIR}/Configure --prefix=${WORKSPACE_INSTALL_DIR} --openssldir=${WORKSPACE_INSTALL_DIR}/ssl
+    COMMAND make
     COMMAND make install
 )
 ENDIF()

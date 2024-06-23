@@ -177,7 +177,7 @@
 /* Define to 1 if you have the <gssapi/gssapi.h> header file. */
 /* #undef HAVE_GSSAPI_GSSAPI_H */
 
-/* #undef WITH_KRB5 */
+#define WITH_KRB5
 
 #ifdef WITH_KRB5
 

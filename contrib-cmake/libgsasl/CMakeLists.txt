@@ -2,7 +2,7 @@ SET(SRC_DIR ${CONTRIB_SOURCE_DIR}/ClickHouse-libgsasl)
 
 MESSAGE(LIBGSASL_SOURCE_DIR: ${SRC_DIR})
 
-OPTION(USE_KRB5 "Kerberos Library Name")
+OPTION(USE_KRB5 "Enable Kerberos")
 
 SET(SRCS
     ${SRC_DIR}/gl/gc-gnulib.c
@@ -106,7 +106,7 @@ TARGET_INCLUDE_DIRECTORIES(libgsasl PUBLIC ${SRC_DIR}/linux_x86_64/include)
 
 IF(USE_KRB5)
     SET(WITH_KRB5 1)
-    TARGET_LINK_LIBRARIES(libgsasl PUBLIC ${KRB5_LIBRARY})
+    TARGET_LINK_LIBRARIES(libgsasl PUBLIC krb5)
 ENDIF()
 
 IF(TARGET OpenSSL::SSL)
