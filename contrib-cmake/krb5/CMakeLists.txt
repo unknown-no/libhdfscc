@@ -10,3 +10,5 @@ EXECUTE_PROCESS(
     COMMAND make install
 )
 ENDIF()
+
+# FIND_PACKAGE(Krb5 REQUIRED)
